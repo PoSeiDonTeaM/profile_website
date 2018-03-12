@@ -9,30 +9,42 @@ body {
    background-image: url("wallpaper.jpg");
    background-color: #cccccc;
    background-size:cover;
+   display: flex;
+   justify-content: center; 
+   align-items: center;
 }
 
 .box{
+  opacity:0.93;
   overflow: hidden;
   position: absolute;
-  display: flex;
-  justify-content: center;
   max-width:35%;
+  width:25%;
   height: 80%;
+  max-height:80%;
   margin:0 auto;
   background-color: white;
-  display: flex;
-  flex-wrap: nowrap;
-  border-radius: 25px; 
+  justify-content:center;
+  border-radius: 10px; 
  
 }
 
+
+
 .w3-round{
+display:block;
+text-align:center;
 border-radius:50%;
 width: 80px;
 height: 80px;
 }
 
+.container{
+display: flex;
+}
+
 #name{
+text-align:center;
 margin-top:40px;
 font-size:35px;
 }
@@ -45,7 +57,22 @@ font-size:35px;
 
 <div class="box">
 
-<img src="profile_photo.jpg" class="w3-round">
+<div class="container"> 
+
+    <div id="leftLine">
+    <hr>
+    </div>
+
+    <div id="image">
+    <img src="profile_photo.jpg" class="w3-round" align="middle">
+    </div>
+    
+    <div id="rightLine">
+    <hr>
+    </div>
+    
+</div>
+
 
 <p id="name"> Ioannis Kotsakiachidis </p>
 

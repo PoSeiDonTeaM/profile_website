@@ -21,7 +21,7 @@ body {
 
 @font-face {
     font-family: 'CoolFont'; /*a name to be used later*/
-    src: url('coolFont.ttf'); /*URL to font*/
+    src: url('coolFont.otf'); /*URL to font*/
 }
 
 .box{
@@ -30,7 +30,7 @@ body {
   max-width:40%;
   min-width: 30%;
   padding: 10px;
-  height: 80%;
+  min-height: 80%;
   max-height:80%;
   margin:0 auto;
   background-color: white;
@@ -42,8 +42,9 @@ body {
 
 
 .w3-round{
-
-margin:auto;
+margin-top:10px;
+margin-left:auto;
+margin-right:auto;
 display:block;
 text-align:center;
 border-radius:50%;
@@ -55,24 +56,36 @@ height: 100px;
 display: flex;
 }
 
-#leftLine{
-margin-top:20px;
-}
-
 
 #name{
 text-align:center;
 margin-top:40px;
-font-size:35px;
+font-size:25px;
 font-family: "coolFont";
 }
 
 #studies{
 font-family: "coolFont";
 text-align:center;
-margin-top:15px;
-font-size: 25px;
+margin-top:35px;
+font-size: 20px;
 float:center;
+}
+
+.get_started{
+background-color:transparent;
+border: 2px;
+padding:30px;
+border-style:solid;
+border-color:gray;
+text-align:center;
+font-family:coolFont;
+margin-top: 30px;
+font-size:20px;
+}
+
+.social_media_line{
+margin-top:35%;
 }
 
 </style>
@@ -86,9 +99,7 @@ float:center;
 <div class="box">
 
 
-    <div id="leftLine">
-    <hr>
-    </div>
+    
 
     <div id="image">
     <img src="profile_photo.jpg" class="w3-round" align="middle">
@@ -102,7 +113,12 @@ float:center;
     
     <p id="studies"> Electrical & Computer Engineering Student </p>
     
-    <hr>
+    
+    
+    <button type="button" class="get_started">Get to know Giannis</button>
+    
+    <hr class="social_media_line">
+    
     
 </div>
 

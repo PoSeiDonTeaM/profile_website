@@ -8,6 +8,7 @@
 
 <style>
 
+
 body {
    background-image: url("wallpaper.jpg");
    background-color: #cccccc;
@@ -24,6 +25,16 @@ body {
     src: url('coolFont.otf'); /*URL to font*/
 }
 
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	93% {
+		opacity: 0.93;
+	}
+}
+
+
 .box{
   opacity:0.93;
   overflow: hidden;
@@ -37,20 +48,22 @@ body {
   justify-content:center;
   border-radius: 10px; 
   text-align:center;
+  animation-name: fadeInOpacity;
+  animation-duration: 3s;
  
 }
 
 
 
 .w3-round{
-margin-top:10px;
+margin-top:15px;
 margin-left:auto;
 margin-right:auto;
 display:block;
 text-align:center;
 border-radius:50%;
-width: 100px;
-height: 100px;
+width: 120px;
+height: 12  0px;
 }
 
 .container{
@@ -86,6 +99,11 @@ font-size:20px;
 margin-top:10%;
 }
 
+.get_started:hover { 
+    color: #00e6e6;
+    border-color: #00e6e6;
+}
+
 .social_media_line{
 margin-top:15%;
 }
@@ -100,7 +118,7 @@ border:1px;
 }
 
 .social_media_icons2{
-margin-left:50px;
+margin-left:80px;
 }
 
 </style>

@@ -1,0 +1,89 @@
+<html>
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title> Kotsakiachidis Ioannis </title>
+
+<style>
+
+@font-face {
+    font-family: 'CoolFont'; /*a name to be used later*/
+    src: url('coolFont.otf'); /*URL to font*/
+}
+
+body {
+    font-family: "CoolFont";
+}
+
+.sidenav {
+    height: 100%;
+    width: 20%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #00e6e6;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+.profile_photo{
+
+min-width:40px;
+max-width:70px;
+min-height:40px;
+max-height:70px;
+
+}
+
+#menu{
+text-align:right;
+}
+
+#name_info{
+color:white;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="sidenav">
+
+  <div id="info"> 
+    <img src="profile_photo.jpg" class="profile_photo">
+    <p id="name_info"> Ioannis Kotsakiachidis </p>
+  </div>  
+  
+  <div id="menu">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#clients">Clients</a>
+      <a href="#contact">Contact</a>
+  </div>
+</div>
+
+
+</body>
+
+</html>

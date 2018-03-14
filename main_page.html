@@ -47,6 +47,7 @@ body {
 
 .profile_photo{
 
+display: inline-block;
 min-width:40px;
 max-width:70px;
 min-height:40px;
@@ -56,10 +57,40 @@ max-height:70px;
 
 #menu{
 text-align:right;
+font-weight:bold;
+margin-top: 50px;
+padding-top:25px;
 }
 
 #name_info{
+
+
 color:white;
+font-weight:bold;
+
+
+}
+
+#identity{
+
+
+color:gray;
+margin-left:15px;
+vertical-align: middle;
+}
+
+#info{
+
+display:table-cell;
+margin:auto;
+display:table;
+min-height:40px;
+max-height:70px;
+vertical-align: middle;
+margin-left:15px;
+min-height:40px;
+max-height:70px;
+
 }
 
 </style>
@@ -71,8 +102,14 @@ color:white;
 <div class="sidenav">
 
   <div id="info"> 
+  
     <img src="profile_photo.jpg" class="profile_photo">
-    <p id="name_info"> Ioannis Kotsakiachidis </p>
+    
+    <div id = "info">
+        <p id="name_info"> Ioannis Kotsakiachidis </p>
+        <p id="identity"> Electrical & Computer Engineering Student</p>
+        
+    </div>
   </div>  
   
   <div id="menu">

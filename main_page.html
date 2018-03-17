@@ -37,30 +37,6 @@ body, html {
     margin:0%;
 }
 
-.sidenav {
-    height: 100%;
-    width: 250px;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    padding-top: 20px;
-}
-
-.sidenav a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-}
-
-.sidenav a:hover {
-    color: #f1f1f1;
-}
-
 
 
 @media screen and (max-height: 450px) {
@@ -86,6 +62,45 @@ body, html {
   }
 }
 
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
 .bg {
     /* The image used */
     background-image: url("main_page_photo.jpeg");
@@ -97,14 +112,16 @@ body, html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    margin-left:250px;
+
+	
     
 }
 
-#main{
-margin-left:250px;
-
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
 }
+
 
 #about_title{
 text-align:center;
@@ -163,7 +180,7 @@ background-color: #fff;
   text-decoration: none;
   position: absolute;
     top:87%;
-    left: 55%;
+    left: 50%;
      transform: translate(-50%, -50%)
 }
 
@@ -175,7 +192,7 @@ background-color:#e9c299;
 font-family: coolFont;
  position: absolute;
  top:60%;
-    left:60%;
+ left:50%;
      transform: translate(-50%, -50%)
     
      
@@ -185,7 +202,7 @@ font-family: coolFont;
 display:inline-block;
 width: 280px;
 height:300px;
-background:white;
+background: linear-gradient(to bottom,  white 85%,#222 15%);
 text-align:center;
 border-radius: 15px;
 box-shadow: 2px 2px 8px #666666;
@@ -205,9 +222,9 @@ animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
 
 .work_text{
 
-margin-top:60px;
+margin-top:65px;
 font-size:19px;
-
+color:white;
 }
 
 .mob_dev{
@@ -220,29 +237,42 @@ width:170px;
 height:170px;
 }
 
+#images{
+margin-top:30px;
+width:170px;
+height:170px;
+border-radius:50%;
+vertical-align:middle;
+}
+
 
 </style>
 </head>
 <body>
 
-
-<div class="sidenav">
-  <a href="#main">About</a>
-  <a href="#services">Services</a>
-  <a href="#clients">Clients</a>
-  <a href="#contact">Contact</a>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
 </div>
 
 
-<div class="bg">
 
+
+
+
+<div class="bg">
+	
+	<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
     <a href="#main"><button type="button" class="btn">Learn more</button></a>
     <h1 id="intro"> Hi. I am Giannis. I am an Electrical & Computer Engineer and also a part time photographer </p>
 
 </div>
 
-
 <div id="main">
+
 
 
 
@@ -283,6 +313,35 @@ height:170px;
             
             
         </div>
+		
+		<div class="work_box videography">
+       
+            <img src="video.png" id="images">
+            <p class="work_text"> CubeSAT</p>
+            
+            
+        </div>
+		
+		<div class="work_box videography">
+       
+            <img src="eestec_logo.png" id="images">
+			
+			
+			<div id="box_of_box">
+            <p class="work_text"> EESTEC </p>
+            
+            </div>
+        </div>
+		
+		<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
         
         
 

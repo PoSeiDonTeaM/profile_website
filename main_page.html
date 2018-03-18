@@ -37,6 +37,10 @@ body, html {
     margin:0%;
 }
 
+p{
+font-family:PlayfairDisplay-Regular;
+color:#555;
+}
 
 
 @media screen and (max-height: 450px) {
@@ -124,8 +128,9 @@ body, html {
 
 #about_title{
 text-align:center;
-font-size:30px;
+font-size:40px;
 font-weight:bold;
+color:#fff;
 }
 
 #about_me_photo img{
@@ -138,17 +143,19 @@ height: 15%;
 #about_me_photo{
     
     float:middle;
+	
 }
 
 #about_me_text{
 float:middle;
 margin-left:15px;
 margin-right:15px;
+
 }
 
 #about{
 overflow: hidden;
-background-color: #dedede; 
+background-color: #456; 
 text-align:center;
 
 
@@ -159,8 +166,6 @@ text-align:center;
 #portfolio{
 overflow: hidden;
 background-color: #fff; 
-
-
 }
 
 
@@ -174,7 +179,7 @@ background-color: #fff;
   font-family: Georgia;
   color: #ffffff;
   font-size: 25px;
-  background: #222;
+  background: #456;
   padding: 15px 60px 15px 60px;
   text-decoration: none;
   position: absolute;
@@ -194,7 +199,7 @@ color:#222;
 }
 
 @font-face {
-    font-family: 'PlayfairDisplay'; /*a name to be used later*/
+    font-family: 'PlayfairDisplay-Regular'; /*a name to be used later*/
     src: url('PlayfairDisplay-Regular.ttf'); /*URL to font*/
 }
 
@@ -244,9 +249,8 @@ background: linear-gradient(to bottom,  white 85%,#222 15%);
 text-align:center;
 border-radius: 15px;
 box-shadow: 2px 2px 8px #666666;
-margin-left:20px;
-margin-bottom:50px;
-
+margin-left:60px;
+margin-bottom:100px;
 
 }
 
@@ -267,6 +271,11 @@ color:white;
 
 .mob_dev{
 
+}
+
+#about_boxes{
+width:80%;
+margin:auto;
 }
 
 #images{
@@ -290,18 +299,20 @@ margin-left:15px;
 
 #about_me_photo{
  float: left;
-   margin-right:60px;
+   margin-right:40px;
 	}
 
 #about_text{
 padding-left:200px;
 padding-right:200px;
 font-size: 30px;
-font-family: IBMPlex;
+font-family: PlayfairDisplay-Regular;
 text-align:justify;
 line-height:40px;
+color:#555;
 
 }
+
 	
 </style>
 </head>
@@ -314,11 +325,6 @@ line-height:40px;
   <a href="#">Clients</a>
   <a href="#">Contact</a>
 </div>
-
-
-
-
-
 
 <div class="bg">
 	
@@ -333,15 +339,27 @@ line-height:40px;
 
 <div id="main">
 
+<div id="portfolio">
 
+<p id="about_title" style="color: #555;"> About me </p>
+
+<p id="about_text"><img src="profile_photo2.jpg" alt="Pineapple" style="width:270px;height:260px;" id="about_me_photo">
+• I am Giannis Kotsakiachidis and I am an Electrical & Computer Engineering student. From the very beginning of my college years I wanted to make good use of my free time in order to feel productive, so I joined EESTEC, a voluntary, non-profit organization, at Xanthi’s Local Committee.
+</p>
+<p id="about_text"> • After my transfer from Democritus University of Thrace to the Aristotle University of Thessaloniki, I became the co-founder of EESTEC LC Thessaloniki. At the second year of my studies, I was a board member of the LC and held the position of Public Relations. Αt the same period I was the coordinator of five other people at the organization of our first international event at Android App Development.</p>
+
+<p id="about_text"> • Βy the end of the second year, I was selected to be a member of Aristotle Space and Aeronautics Team (ASAT), in order to work on the CubeSAT project, a nano-satellite designed for research purposes. At the third year of my studies, I acquired the position of OBC coordinator, the sub-system that is basically the “brain” of the satellite and controls every order run by it.</p>
+
+<p id="about_text"> • In a parallel manner, I was working with web and mobile development and worked as a part-time photographer on holidays. </p>
+</div>
 
 
 <div id="about">
 
         <p id="about_title"> My Work </p>
 
-        
-        
+        <div id="about_boxes">
+		
         <div class="work_box web_dev">
         
             <img src="web_dev.png" id="images">
@@ -403,18 +421,39 @@ function closeNav() {
 }
 </script>
         
-        
-
-
-<div id="portfolio">
-
-<p id="about_title"> About me </p>
-<p id="about_text"><img src="profile_photo2.jpg" alt="Pineapple" style="width:270px;height:260px;" id="about_me_photo">
-I am Giannis Kotsakiachidis and I am an Electrical & Computer Engineering student. From the very beginning of my college years I wanted to make good use of my free time in order to feel productive, so I joined EESTEC, a voluntary, non-profit organization, at Xanthi’s Local Committee. After my transfer from Democritus University of Thrace to the Aristotle University of Thessaloniki, I became the co-founder of EESTEC LC Thessaloniki. At the second year of my studies, I was a board member of the LC and held the position of Public Relations. Αt the same period I was the coordinator of five other people at the organization of our first international event at Android App Development. Βy the end of the second year, I was selected to be a member of Aristotle Space and Aeronautics Team (ASAT), in order to work on the CubeSAT project, a nano-satellite designed for research purposes. At the third year of my studies, I acquired the position of OBC coordinator, the sub-system that is basically the “brain” of the satellite and controls every order run by it. In a parallel manner, I was working with web and mobile development and worked as a part-time photographer on holidays.
-</p>
+		</div>
+       
 </div>
+	   
+	   <div id="portfolio">
+	   
+	   <p id="about_title" style="color:#555;"> Contact </p>
+	   
+	   <p id="about_text"> If you want to know more about me, you can contact me at the following info mostly at any time (I don't sleep often).
+	   
+	  
+	   
+	   <p id="about_text"><img src="facebook-logo.png" alt="Pineapple" style="width:30px;height:30px; margin-top: 8px;" id="about_me_photo"> johnkotsas97@gmail.com </p>
+	   <p id="about_text"> +30 6982289241 </p>
+	   
+	   </div>
+	   
+	   
+	   
+	   
+	   
 
-</div>
+
+
+
+
+
+
+
+
+
+
+
 
 
 

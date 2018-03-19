@@ -2,22 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script>
-
-$(document).ready(function(){       
-   var scroll_start = 0;
-   var startchange = $('#main');
-   var offset = startchange.offset();
-   $(document).scroll(function() { 
-      scroll_start = $(this).scrollTop();
-      if(scroll_start > offset.top) {
-          $('.navigation-bar').css('background-color', '#f0f0f0');
-       } else {
-          $('.navigation-bar').css('background-color', 'transparent');
-       }
-   });
-});
-</script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
@@ -86,11 +71,6 @@ color:#555;
     color: white;
     font-size:25px;
   
-}
-
-.navigation-bar .scrolled {
-  background-color: #fff !important;
-  transition: background-color 200ms linear;
 }
 
 
@@ -171,8 +151,6 @@ text-align:center;
 
 }
 
-
-
 #portfolio{
 overflow: hidden;
 background-color: #fff; 
@@ -214,64 +192,9 @@ color:#222;
 }
 
 
-
-#intro{
-font-family: coolFont;
- position: absolute;
- top:25%;
- left:50%;
- font-family:coolFont;
-     transform: translate(-50%, -50%)
 	 
-    
+
      
-     }
-	 
-	 #typewriter h1 {
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid black; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .15em; /* Adjust as needed */
-  animation: 
-    typing 3.5s steps(40, end),
-    blink-caret .75s step-end infinite;
-	height:45px;
-}
-
-/* The typing effect */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 50% }
-}
-
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: black; }
-}
-     
-.work_box{
-display:inline-block;
-width: 280px;
-height:300px;
-background: linear-gradient(to bottom,  white 85%,#222 15%);
-text-align:center;
-border-radius: 15px;
-box-shadow: 2px 2px 8px #666666;
-margin-left:60px;
-margin-bottom:100px;
-
-}
-
-.work_box:hover{
-animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
-  transform: translate3d(0, 0, 0);
-  backface-visibility: hidden;
-  perspective: 1000px;
-  
-  }
-
 .work_text{
 
 margin-top:65px;
@@ -279,14 +202,6 @@ font-size:19px;
 color:white;
 }
 
-.mob_dev{
-
-}
-
-#about_boxes{
-width:80%;
-margin:auto;
-}
 
 #images{
 margin-top:30px;
@@ -323,19 +238,6 @@ color:#555;
 
 }
 
-.img-container {
-    
-    float: left;
-    width: 33.3%;
-    height:100%;
-        
-}
-
-.img-container:hover {
-    
- 
-}
-
 .row {
     margin: 8px -16px;
    
@@ -350,13 +252,13 @@ color:#555;
 /* Create four equal columns that floats next to each other */
 .column {
     float: left;
-    width: 33.3%;
+    width: 45%;
 }
 
 /* Clear floats after rows */ 
 .row:after {
     content: "";
-    display: table;
+    display: inline-block;
     clear: both;
 }
 
@@ -364,6 +266,9 @@ color:#555;
 .content {
     background-color: white;
     padding: 10px;
+    border-radius:2px;
+    box-shadow: 2px 2px 14px;
+    
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
@@ -381,10 +286,54 @@ color:#555;
 }
 
 #work_grid{
-width:90%;
+width:100%;
 text-align:center;
 }
 
+
+.header {
+    text-align: center;
+    padding: 32px;
+}
+
+.row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    padding: 10px 40px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+    .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    }
+}
 
 	
 </style>
@@ -415,16 +364,39 @@ text-align:center;
 
 <div id="portfolio">
 
-<p id="about_title" style="color: #555;"> About me </p>
+<!-- Header -->
+<div class="header">
+  <h1>Image Grid</h1>
+  <p>Below there are some photos that were taken by me.</p>
+</div>
 
-<p id="about_text"><img src="profile_photo2.jpg" alt="Pineapple" style="width:270px;height:260px;" id="about_me_photo">
-• I am Giannis Kotsakiachidis and I am an Electrical & Computer Engineering student. From the very beginning of my college years I wanted to make good use of my free time in order to feel productive, so I joined EESTEC, a voluntary, non-profit organization, at Xanthi’s Local Committee.
-</p>
-<p id="about_text"> • After my transfer from Democritus University of Thrace to the Aristotle University of Thessaloniki, I became the co-founder of EESTEC LC Thessaloniki. At the second year of my studies, I was a board member of the LC and held the position of Public Relations. Αt the same period I was the coordinator of five other people at the organization of our first international event at Android App Development.</p>
+<!-- Photo Grid -->
+<div class="row"> 
+  <div class="column">
+    <img src="photography/alice_chair.jpg" style="width:100%">
+    <img src="photography/_DSC0785.jpg" style="width:100%">
+    <img src="photography/kerkini_boat.jpg" style="width:100%">
 
-<p id="about_text"> • Βy the end of the second year, I was selected to be a member of Aristotle Space and Aeronautics Team (ASAT), in order to work on the CubeSAT project, a nano-satellite designed for research purposes. At the third year of my studies, I acquired the position of OBC coordinator, the sub-system that is basically the “brain” of the satellite and controls every order run by it.</p>
+  </div>
+  <div class="column">
+    <img src="photography/nikos_bw.jpg" style="width:100%">
+    
+    <img src="photography/dice.jpg" style="width:100%">
+    
+  </div>  
+  <div class="column">
+    <img src="photography/Nikos_3.jpg" style="width:100%">
+    <img src="photography/nick.jpg" style="width:100%">
+    
+  </div>
+  <div class="column">
+    <img src="photography/DSC_6257.jpg" style="width:100%">
+   
+  </div>
+</div>
 
-<p id="about_text"> • In a parallel manner, I was working with web and mobile development and worked as a part-time photographer on holidays. </p>
+
+    
 </div>
 
 
@@ -467,56 +439,8 @@ text-align:center;
 </div>
 </div>
 		
-        <div class="work_box web_dev">
-        
-            <img src="web_dev.png" id="images">
-            <p class="work_text"> Web Development </p>
-            
-            
-        </div>
-        
-       <div class="work_box mob_dev">
        
-            <img src="mob_dev.png" id="images">
-            <p class="work_text"> Android App Development </p>
-            
-            
-        </div>
-        
-        <div class="work_box photography">
-       
-            <img src="photo.png" id="images">
-            <p class="work_text"> Photography </p>
-            
-            
-        </div>
-        
-        <div class="work_box videography">
-       
-            <img src="video.png" id="images">
-            <p class="work_text"> Videography and Video Editing </p>
-            
-            
-        </div>
-		
-		<div class="work_box videography">
-       
-            <img src="Satellite.png" id="images">
-            <p class="work_text"> CubeSAT</p>
-            
-            
-        </div>
-		
-		<div class="work_box videography">
-       
-            <img src="eestec_logo.png" id="images">
-			
-			
-			<div id="box_of_box">
-            <p class="work_text"> EESTEC </p>
-            
-            </div>
-        </div>
+
 		
 		<script>
 function openNav() {
@@ -550,10 +474,43 @@ function closeNav() {
 	   
 	   
 
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
 
 
 
+<script>
 
+$(document).ready(function(){       
+   var scroll_start = 0;
+   var startchange = $('#main');
+   var offset = startchange.offset();
+   $(document).scroll(function() { 
+      scroll_start = $(this).scrollTop();
+      if(scroll_start > offset.top) {
+          $('.navigation-bar').css('background-color', '#818D98');
+       } else {
+          $('.navigation-bar').css('background-color', 'transparent');
+       }
+   });
+});
+</script>
 
 
 

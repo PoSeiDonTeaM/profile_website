@@ -2,7 +2,22 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
 
+$(document).ready(function(){       
+   var scroll_start = 0;
+   var startchange = $('#main');
+   var offset = startchange.offset();
+   $(document).scroll(function() { 
+      scroll_start = $(this).scrollTop();
+      if(scroll_start > offset.top) {
+          $('.navigation-bar').css('background-color', '#f0f0f0');
+       } else {
+          $('.navigation-bar').css('background-color', 'transparent');
+       }
+   });
+});
+</script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
@@ -32,6 +47,9 @@ $(document).ready(function(){
 </script>
 
 <style>
+
+
+
 body, html {
     height: 100%;
     margin:0%;
@@ -70,11 +88,12 @@ color:#555;
   
 }
 
-
-@media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
+.navigation-bar .scrolled {
+  background-color: #fff !important;
+  transition: background-color 200ms linear;
 }
+
+
 
 @keyframes shake {
   10%, 90% {
@@ -382,23 +401,9 @@ text-align:center;
     <a href="#">Home</a>
 </nav>
 
-<script>
 
-$(document).ready(function(){       
-   var scroll_start = 0;
-   var startchange = $('#startchange');
-   var offset = startchange.offset();
-   $(document).scroll(function() { 
-      scroll_start = $(this).scrollTop();
-      if(scroll_start > offset.top) {
-          $('#navbar').css('background-color', 'white');
-       } else {
-          $('#navbar').css('background-color', 'transparent');
-       }
-   });
-});
 
-</script>
+
 
     <a href="#main"><button type="button" class="btn">Learn more</button></a>
 	

@@ -45,6 +45,8 @@ color:#555;
 .navigation-bar {
     width: 100%;  /* i'm assuming full width */
     height: 60px; /* change it to desired width */
+    position: fixed;
+  top: 0;
   
 }
 .logo {
@@ -317,6 +319,7 @@ color:#555;
 
 .row {
     margin: 8px -16px;
+   
 }
 
 /* Add padding BETWEEN each column */
@@ -328,7 +331,7 @@ color:#555;
 /* Create four equal columns that floats next to each other */
 .column {
     float: left;
-    width: 25%;
+    width: 33.3%;
 }
 
 /* Clear floats after rows */ 
@@ -358,6 +361,11 @@ color:#555;
     }
 }
 
+#work_grid{
+width:90%;
+text-align:center;
+}
+
 
 	
 </style>
@@ -373,6 +381,24 @@ color:#555;
     <a href="#">My Work</a>
     <a href="#">Home</a>
 </nav>
+
+<script>
+
+$(document).ready(function(){       
+   var scroll_start = 0;
+   var startchange = $('#startchange');
+   var offset = startchange.offset();
+   $(document).scroll(function() { 
+      scroll_start = $(this).scrollTop();
+      if(scroll_start > offset.top) {
+          $('#navbar').css('background-color', 'white');
+       } else {
+          $('#navbar').css('background-color', 'transparent');
+       }
+   });
+});
+
+</script>
 
     <a href="#main"><button type="button" class="btn">Learn more</button></a>
 	
@@ -402,6 +428,7 @@ color:#555;
         <p id="about_title"> My Work </p>
 
         <!-- Portfolio Gallery Grid -->
+        <div id="work_grid">
 <div class="row">
   <div class="column">
     <div class="content">
@@ -412,26 +439,27 @@ color:#555;
   </div>
   <div class="column">
     <div class="content">
-    <img src="/w3images/lights.jpg" alt="Lights" style="width:100%">
+    <img src="photography/babewatch.jpg" alt="Lights" style="width:100%">
       <h3>My Work</h3>
       <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
     </div>
   </div>
   <div class="column">
     <div class="content">
-    <img src="/w3images/nature.jpg" alt="Nature" style="width:100%">
+    <img src="photography/lithotopos.jpg" alt="Nature" style="width:100%">
       <h3>My Work</h3>
       <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
     </div>
   </div>
   <div class="column">
     <div class="content">
-    <img src="/w3images/mountains.jpg" alt="Mountains" style="width:100%">
+    <img src="photography/ernesto_ballaro.jpg" alt="Mountains" style="width:100%">
       <h3>My Work</h3>
       <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
     </div>
   </div>
 <!-- END GRID -->
+</div>
 </div>
 		
         <div class="work_box web_dev">

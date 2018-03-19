@@ -230,12 +230,27 @@ margin-left:15px;
 #about_text{
 padding-left:200px;
 padding-right:200px;
-font-size: 30px;
+font-size: 20px;
 font-family: PlayfairDisplay-Regular;
-text-align:justify;
+text-align:center;
 line-height:40px;
 color:#555;
 
+}
+
+
+#about_text2{
+font-size: 20px;
+font-family: PlayfairDisplay-Regular;
+text-align:center;
+display:inline-block;
+line-height:40px;
+color:#555;
+
+}
+
+#about_text3{
+margin-left:25px;
 }
 
 .row {
@@ -294,6 +309,7 @@ text-align:center;
 .header {
     text-align: center;
     padding: 32px;
+    margin-top:10px;
 }
 
 .row {
@@ -334,6 +350,29 @@ text-align:center;
         max-width: 100%;
     }
 }
+
+#info{
+text-align:center;
+}
+
+.img-container {
+    
+    float: left;
+    width: 33.3%;
+    height:110%;
+    text-align:center;
+    margin-top:10px;
+    padding:20px;
+    
+        
+}
+
+.img-container:hover{
+background-color:#456;
+}
+
+
+
 
 	
 </style>
@@ -380,13 +419,14 @@ text-align:center;
   </div>
   <div class="column">
     <img src="photography/nikos_bw.jpg" style="width:100%">
-    
     <img src="photography/dice.jpg" style="width:100%">
+    
     
   </div>  
   <div class="column">
     <img src="photography/Nikos_3.jpg" style="width:100%">
     <img src="photography/nick.jpg" style="width:100%">
+    <img src="photography/bg.png" style="width:100%">
     
   </div>
   <div class="column">
@@ -410,29 +450,29 @@ text-align:center;
   <div class="column">
     <div class="content">
       <img src="photography/nikos_jean.jpg" alt="Mountains" style="width:100%">
-      <h3>My Work</h3>
-      <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+      <h3>Brother Fashion Portrait</h3>
+      <p>The photo has been taken at my own home-studio. The theme of that day's photoshoot was fashion photography. My brother wore many vintage clothes for the photoshooting purpose.</p>
     </div>
   </div>
   <div class="column">
     <div class="content">
     <img src="photography/babewatch.jpg" alt="Lights" style="width:100%">
-      <h3>My Work</h3>
-      <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+      <h3>Babewatch - One Stand Event</h3>
+      <p>Worked as event photographer hired by One Stand Event at Ballaro All day beach bar, which is located in the second "foot" of Chalkidiki, in Greece.</p>
     </div>
   </div>
   <div class="column">
     <div class="content">
     <img src="photography/lithotopos.jpg" alt="Nature" style="width:100%">
-      <h3>My Work</h3>
-      <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+      <h3>Lithotopos Landscape</h3>
+      <p>The photo has taken in an Excursion at Lithotopos, a village that is near Kerkini Lake. The scenery was amazing and full of green. </p>
     </div>
   </div>
   <div class="column">
     <div class="content">
     <img src="photography/ernesto_ballaro.jpg" alt="Mountains" style="width:100%">
-      <h3>My Work</h3>
-      <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+      <h3>Ballaro Restaurant</h3>
+      <p>Worked as a photographer for a local gourmet restaurant's advertisement for their new italian cook, Ernesto. Also, worked as an event photographer at Christmas' Eve.</p>
     </div>
   </div>
 <!-- END GRID -->
@@ -458,21 +498,40 @@ function closeNav() {
 	   
 	   <div id="portfolio">
 	   
-	   <p id="about_title" style="color:#555;"> Contact </p>
+	   <p id="about_title" style="color:black;"> Contact </p>
 	   
-	   <p id="about_text"> If you want to know more about me, you can contact me at the following info mostly at any time (I don't sleep often).
+	   <p id="about_text"> If you want to know more about me, you can contact me at the following info mostly at any time (I don't sleep often).</p>
 	   
 	  
+	   <div id="info">
+	   <p id="about_text2"><img src="mail.png" alt="Pineapple" style="width:30px;height:30px;" > johnkotsas97@gmail.com </p>
+	   <p id="about_text2"><img src="phone.png" alt="Pineapple" style="width:20px;height:20px; margin-left:80px;" > +30 6982289241 </p>
 	   
-	   <p id="about_text"><img src="facebook-logo.png" alt="Pineapple" style="width:30px;height:30px; margin-top: 8px;" id="about_me_photo"> johnkotsas97@gmail.com </p>
-	   <p id="about_text"> +30 6982289241 </p>
-	   
+       </div>
+       
+       <div id="social_media" align="middle">
+            
+            <div class="img-container facebook">
+                <img src="facebook-logo.png" alt="Fjords" style="width:60px; height:60px;">
+            </div>
+            
+            <div class="img-container instagram">
+                <img src="instagram-logo.png" alt="Forest" style="width:60px; height:60px;">
+            </div>
+            
+            <div class="img-container linkedin">
+                <img src="linkedin-logo.png" alt="Mountains" style="width:60px; height:60px;">
+            </div>
+                        
+      </div>
+       
 	   </div>
 	   
 	   
 	   
 	   
 	   
+<script>
 
 var slideIndex = 1;
 showDivs(slideIndex);

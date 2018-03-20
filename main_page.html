@@ -66,6 +66,15 @@ color:#555;
   }
 }
 
+@keyframes opacity {
+    0% {
+    opacity:0%;
+    }
+    100%{
+    opacity: 100%;
+    }
+    }
+
 .sidenav {
     height: 100%;
     width: 0;
@@ -386,6 +395,39 @@ bottom:0;
    -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
     filter: grayscale(0%);
     }
+    
+    #info{
+text-align:center;
+}
+
+.img-container1 {
+    
+    float: left;
+    width: 33.3%;
+    height:100%;
+    text-align:center;
+    margin-top:10px; 
+    padding-top:10px;
+    padding-bottom:5px;
+        
+}
+
+.img-container1:hover{
+background-color:#818D98;
+}
+
+#about_text2{
+font-size: 20px;
+font-family: PlayfairDisplay-Regular;
+text-align:center;
+display:inline-block;
+line-height:40px;
+color:#555;
+
+}
+
+    
+    
 	
 </style>
 </head>
@@ -464,13 +506,13 @@ bottom:0;
             
         </div>
         
-       <div class="work_box mob_dev">
+       <a href="mobile_app.html"><div class="work_box mob_dev">
        
             <img src="mob_dev.png" id="images">
             <p class="work_text"> Android App Development </p>
             
             
-        </div>
+        </div></a>
         
        <a href="photography.html"> <div class="work_box photography"> 
        
@@ -523,14 +565,34 @@ function closeNav() {
 	   
 	   <div id="portfolio">
 	   
-	   <p id="about_title" style="color:#555;"> Contact </p>
+	   <p id="about_title" style="color:black;"> Contact </p>
 	   
-	   <p id="about_text"> If you want to know more about me, you can contact me at the following info mostly at any time (I don't sleep often).
+	   <p id="about_text"> If you want to know more about me, you can contact me at the following info mostly at any time (I don't sleep often).</p>
 	   
 	  
+	   <div id="info">
+	   <p id="about_text2"><img src="mail.png" alt="Pineapple" style="width:30px;height:30px;" > johnkotsas97@gmail.com </p>
+	   <p id="about_text2"><img src="phone.png" alt="Pineapple" style="width:20px;height:20px; margin-left:80px;" > +30 6982289241 </p>
 	   
-	   <p id="about_text"><img src="facebook-logo.png" alt="Pineapple" style="width:30px;height:30px; margin-top: 8px;" id="about_me_photo"> johnkotsas97@gmail.com </p>
-	   <p id="about_text"> +30 6982289241 </p>
+       </div>
+       
+       <div id="social_media" align="middle">
+            
+            <a href="https://www.facebook.com/kotsas"><div class="img-container1">
+                <img src="facebook-logo.png" alt="Fjords" style="width:60px; height:60px;">
+            </div></a>
+            
+            <a href="https://www.instagram.com/gianniskotsas/"><div class="img-container1">
+                <img src="instagram-logo.png" alt="Forest" style="width:60px; height:60px;">
+            </div></a>
+            
+            <a href="https://www.linkedin.com/in/ioannis-kotsakiachidis-764a85114/"><div class="img-container1">
+                <img src="linkedin-logo.png" alt="Mountains" style="width:60px; height:60px;">
+            </div></a>
+                        
+      </div>
+       
+	   </div>
 	   
 	   </div>
 	   

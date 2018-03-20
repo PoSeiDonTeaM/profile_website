@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 1000, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+
+<style>
+body, html {
+    height: 100%;
+    margin:0%;
+}
+
+p{
+font-family:PlayfairDisplay-Regular;
+color:#555;
+}
+
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+
+
+.bg {
+    /* The image used */
+    background-image: url("denpov.png");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: 50% 30%;
+    background-repeat: no-repeat;
+    background-size: 40%;
+    animation-name: opacity;
+    animation-duration: 4s;
+
+	
+    
+}
+
+#main {
+    box-shadow: 0 -5px 5px -5px #333;
+}
+
+
+.navigation-bar {
+    width: 100%;  /* i'm assuming full width */
+    height: 60px; /* change it to desired width */
+    position: fixed;
+    top: 0;
+    background-color:white;
+    box-shadow: 0px 0px 2px;
+
+  
+}
+.logo {
+    display: inline-block;
+    vertical-align: top;
+    width: 76px;
+    height: 45px;
+    margin-left: 100px;
+    margin-top: 10px;    /* if you want it vertically middle of the navbar. */
+    float:left;
+}
+.navigation-bar > a {
+    float:right;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 70px;
+    height: 80px;        /* if you want it to take the full height of the bar */
+    line-height: 60px;    /* if you want it vertically middle of the navbar */
+    color: black;
+    font-size:25px;
+  
+}
+
+
+#about_title{
+text-align:center;
+font-size:40px;
+font-weight:bold;
+color:#fff;
+}
+
+#about_me_photo img{
+
+width: 15%;
+height: 15%;
+
+}
+
+#about_me_photo{
+    
+    float:middle;
+	
+}
+
+#about_me_text{
+float:middle;
+margin-left:15px;
+margin-right:15px;
+
+}
+
+#about{
+overflow: hidden;
+background-color: #456; 
+text-align:center;
+
+
+}
+
+
+
+#portfolio{
+overflow: hidden;
+background-color: #fff; 
+}
+
+
+.btn {
+  -webkit-border-radius: 15;
+  -moz-border-radius: 15;
+  border-radius: 15px;
+  -webkit-box-shadow: 2px 2px 8px #666666;
+  -moz-box-shadow: 2px 2px 8px #666666;
+  box-shadow: 3px 3px 10px #666666;
+  font-family: Georgia;
+  color: #ffffff;
+  font-size: 25px;
+  background: #456;
+  padding: 15px 60px 15px 60px;
+  text-decoration: none;
+  position: absolute;
+    top:87%;
+    left: 50%;
+     transform: translate(-50%, -50%)
+}
+
+.btn:hover{
+background-color:#fff;
+color:#222;
+}
+
+@font-face {
+    font-family: 'CoolFont'; /*a name to be used later*/
+    src: url('coolFont.otf'); /*URL to font*/
+}
+
+@font-face {
+    font-family: 'PlayfairDisplay-Regular'; /*a name to be used later*/
+    src: url('PlayfairDisplay-Regular.ttf'); /*URL to font*/
+}
+
+
+
+#intro{
+font-family: coolFont;
+ position: absolute;
+ top:25%;
+ left:50%;
+ font-family:coolFont;
+     transform: translate(-50%, -50%)
+	 
+    
+     
+     }
+
+
+     
+.work_box{
+display:inline-block;
+width: 280px;
+height:300px;
+background: linear-gradient(to bottom,  white 85%,#222 15%);
+text-align:center;
+border-radius: 15px;
+box-shadow: 2px 2px 8px #666666;
+margin-left:60px;
+margin-bottom:100px;
+
+}
+
+.work_box:hover{
+animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  
+  }
+
+.work_text{
+
+margin-top:65px;
+font-size:19px;
+color:white;
+}
+
+.mob_dev{
+
+}
+
+#about_boxes{
+width:80%;
+margin:auto;
+}
+
+#images{
+margin-top:30px;
+width:170px;
+height:170px;
+}
+
+#images{
+margin-top:30px;
+width:170px;
+height:170px;
+border-radius:50%;
+vertical-align:middle;
+}
+
+#navbar_opener{
+margin-top:25px;
+margin-left:15px;
+}
+
+#about_me_photo{
+ float: left;
+   margin-right:40px;
+	}
+
+#about_text{
+padding-left:200px;
+padding-right:200px;
+font-size: 30px;
+font-family: PlayfairDisplay-Regular;
+text-align:justify;
+line-height:40px;
+color:#555;
+
+}
+
+.img-container {
+    
+    float: left;
+    width: 33.3%;
+    height:100%;
+        
+}
+
+.img-container:hover {
+    
+ 
+}
+
+#social_media{
+position:relative;
+bottom:0;
+
+}
+
+.facebook{
+-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+
+   }
+   
+.facebook:hover{
+   -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(0%);
+    }
+    
+    
+.linkedin{
+-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+
+   }    
+.linkedin:hover{
+   -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(0%);
+    }
+  
+  .instagram{
+-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+
+   }
+  .instagram:hover{
+   -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(0%);
+    }
+    
+    #info{
+text-align:center;
+}
+
+.img-container1 {
+    
+    float: left;
+    width: 33.3%;
+    height:100%;
+    text-align:center;
+    margin-top:10px; 
+    padding-top:10px;
+    padding-bottom:5px;
+        
+}
+
+.img-container1:hover{
+background-color:#818D98;
+}
+
+#about_text2{
+font-size: 20px;
+font-family: PlayfairDisplay-Regular;
+text-align:center;
+display:inline-block;
+line-height:40px;
+color:#555;
+
+}
+
+@keyframes opacity {
+    from {
+    opacity:0;
+    }
+    to{
+    opacity: 1;
+    }
+    }
+
+    
+    
+	
+</style>
+</head>
+<body>
+
+<div class="bg" id="bg">
+	
+	<nav class="navigation-bar">
+    <img class="logo" src="denpov.png">
+    <a href="#about_title">About DENGpov</a>
+    <a href="main_page.html">Home</a>
+    </nav>
+    
+    
+    <a href="#main"><button type="button" class="btn">Learn more</button></a>
+	
+	
+	
+</div>
+
+<div id="main">
+
+<div id="portfolio">
+
+<p id="about_title" style="color: #555;"> About DENGpov </p>
+
+<p id="about_text"><img src="profile_photo2.jpg" alt="Pineapple" style="width:270px;height:260px;" id="about_me_photo">
+At summer of 2017, me and my childhood friend, Menelaos (seen in photo) decided to create a series of mobile applications (starting with some mobile games.), so we created DENGpov. During that period, it was really intense, because we wanted to make the most difficult game ever created,
+in order to attract more people by using the factor of competitiveness. After long hours of no sleep , we managed to release 2 mobile games in both App Store and Play Store, called Grayscale and Flamingo Run. In addition to this, before the release we decided to launch another app,
+Where did I park? , whose purpose was to locate your parked car at any time using Google maps and GPS and to tell the truth? This app helped a LOT of people find their cars, especially at night. So, stay tuned for more apps and games. 
+</p>
+
+</div>
+
+
+<div id="about">
+
+        <p id="about_title"> Our Apps </p>
+
+        <div id="about_boxes">
+		
+        <a href="https://play.google.com/store/apps/details?id=com.dengpov.grayscale"><div class="work_box web_dev">
+        
+            <img src="grayscale.png" id="images">
+            <p class="work_text"> Grayscale </p>
+            
+            
+        </div></a>
+        
+       <a href="https://play.google.com/store/apps/details?id=com.dengpov.flamingorun"><div class="work_box mob_dev">
+       
+            <img src="flamingo_run.png" id="images">
+            <p class="work_text"> Flamingo Run </p>
+            
+            
+        </div></a>
+        
+       <a href="https://play.google.com/store/apps/details?id=com.thunkable.android.menebourne.Where_did_I_park"> <div class="work_box photography"> 
+       
+            <img src="where_did_i_park.png" id="images">
+            <p class="work_text"> Where did I park? </p>
+            
+            
+        </div></a>
+        
+        <div class="work_box videography">
+       
+            <img src="video.png" id="images">
+            <p class="work_text"> Coming Soon </p>
+            
+            
+        </div>
+		
+		
+        </div>
+		
+		<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+        
+		</div>
+       
+</div>
+	   
+	   <div id="portfolio">
+	   
+	   <p id="about_title" style="color:black;"> Contact </p>
+	   
+	   <p id="about_text"> If you want to know more about me, you can contact me at the following info mostly at any time (I don't sleep often).</p>
+	   
+	  
+	   <div id="info">
+	   <p id="about_text2"><img src="mail.png" alt="Pineapple" style="width:30px;height:30px;" > johnkotsas97@gmail.com </p>
+	   <p id="about_text2"><img src="phone.png" alt="Pineapple" style="width:20px;height:20px; margin-left:80px;" > +30 6982289241 </p>
+	   
+       </div>
+       
+       <div id="social_media" align="middle">
+            
+            <a href="https://www.facebook.com/kotsas"><div class="img-container1">
+                <img src="facebook-logo.png" alt="Fjords" style="width:60px; height:60px;">
+            </div></a>
+            
+            <a href="https://www.instagram.com/gianniskotsas/"><div class="img-container1">
+                <img src="instagram-logo.png" alt="Forest" style="width:60px; height:60px;">
+            </div></a>
+            
+            <a href="https://www.linkedin.com/in/ioannis-kotsakiachidis-764a85114/"><div class="img-container1">
+                <img src="linkedin-logo.png" alt="Mountains" style="width:60px; height:60px;">
+            </div></a>
+                        
+      </div>
+       
+	   </div>
+	   
+	   </div>
+	   
+	   
+	   
+	   
+	   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

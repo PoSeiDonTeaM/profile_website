@@ -168,6 +168,8 @@ height: 15%;
 #about_me_photo{
     
     float:middle;
+    width:250px;
+    height:350px;
 	
 }
 
@@ -182,8 +184,6 @@ margin-right:15px;
 overflow: hidden;
 background-color: #456; 
 text-align:center;
-
-
 }
 
 
@@ -229,6 +229,11 @@ background-color: #fff;
   margin-bottom:40px;
   margin-top: 10px;
   margin-left: 45%;
+}
+
+.btn_cv:hover{
+background-color:#fff;
+color:#222;
 }
 
 .btn:hover{
@@ -356,6 +361,11 @@ color:#555;
 
 }
 
+#info_icons{
+    width: 30px;
+    height: 30px;
+    }
+
 .img-container {
     
     float: left;
@@ -462,9 +472,57 @@ font-size:20px;
     }
 
     #about_me_photo{
-    width:90px;
-    height: 90px;
+    width:120px;
+    height:168px;
     }
+    
+    .btn_cv {
+    font-size:15px;
+    margin-left:28%;
+    }
+    
+     
+    .work_box{
+    width: 180px;
+    height:200px;
+    background: linear-gradient(to bottom,  white 85%,#222 15%);
+    text-align:center;
+    border-radius: 15px;
+    box-shadow: 2px 2px 8px #666666;
+    margin-left:60px;
+    margin-bottom:100px;
+
+    }    
+    
+    #images{
+    margin-top:20px;
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    vertical-align:middle;
+    }    
+
+    #about_boxes{
+    width:80%;
+    text-align:center;
+    }
+    
+    #info_icons{
+    width:15px;
+    height:15px;
+    }
+    
+    #about_text2{
+    font-size: 10px;
+    }
+    
+    .work_text {
+    margin-top: 35px;
+    font-size: 12px;
+    color: white;
+}
+    
+
 
 }
 
@@ -523,7 +581,7 @@ font-size:20px;
 
 <p id="about_title" style="color: #555;"> About me </p>
 
-<p id="about_text"><img src="kotsas.jpg" alt="Pineapple" style="width:250px;height:350px;" id="about_me_photo">
+<p id="about_text"><img src="kotsas.jpg" alt="Pineapple" id="about_me_photo">
 • I am Giannis Kotsakiachidis and I am an Electrical & Computer Engineering student. From the very beginning of my college years I wanted to make good use of my free time in order to feel productive, so I joined EESTEC, a voluntary, non-profit organization, at Xanthi’s Local Committee.
 </p>
 <p id="about_text"> • After my transfer from Democritus University of Thrace to the Aristotle University of Thessaloniki, I became the co-founder of EESTEC LC Thessaloniki. At the second year of my studies, I was a board member of the LC and held the position of Public Relations. Αt the same period I was the coordinator of five other people at the organization of our first international event at Android App Development.</p>
@@ -616,8 +674,8 @@ function closeNav() {
 	   
 	  
 	   <div id="info">
-	   <p id="about_text2"><img src="mail.png" alt="Pineapple" style="width:30px;height:30px;" > johnkotsas97@gmail.com </p>
-	   <p id="about_text2"><img src="phone.png" alt="Pineapple" style="width:20px;height:20px; margin-left:80px;" > +30 6982289241 </p>
+	   <p id="about_text2"><img src="mail.png" alt="Pineapple" id="info_icons"> johnkotsas97@gmail.com </p>
+	   <p id="about_text2" style="margin-left:10px;"><img src="phone.png" alt="Pineapple" id="info_icons" > +30 6982289241 </p>
 	   
        </div>
        

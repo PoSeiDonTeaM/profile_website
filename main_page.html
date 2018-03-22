@@ -268,14 +268,14 @@ font-family: coolFont;
   letter-spacing: .15em; /* Adjust as needed */
   animation: 
     typing 3.5s steps(40, end),
-    blink-caret .75s step-end infinite;
+    blink-caret .5s step-end infinite;
 	height:45px;
 }
 
 /* The typing effect */
 @keyframes typing {
   from { width: 0 }
-  to { width: 50% }
+  to { width: 20% }
 }
 
 /* The typewriter cursor effect */
@@ -437,6 +437,37 @@ color:#555;
 
 }
 
+@media screen and (max-width: 500px)
+{
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 65% }
+}
+
+#intro{
+font-size:20px;
+}
+
+#typewriter h1 {
+	height:25px;
+}
+
+#about_text{ 
+    padding-right: 50px;
+    padding-left: 50px;
+    font-size: 15px;
+    line-height:20px;
+    }
+
+    #about_me_photo{
+    width:90px;
+    height: 90px;
+    }
+
+}
+
     
     
 	
@@ -481,7 +512,7 @@ color:#555;
     <a href="#main"><button type="button" class="btn">Learn more</button></a>
 	
 	<div id="typewriter">
-		<h1 id="intro"> Hi. I am Giannis.  Welcome to my Portfolio. </p>
+		<h1 id="intro"> Hi. I am Giannis.</p>
 	</div>
 	
 </div>

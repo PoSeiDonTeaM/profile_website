@@ -36,6 +36,7 @@ body, html {
     height: 100%;
     margin:0%;
     padding:0&;
+	font-family: league_font;
 }
 
 p{
@@ -183,7 +184,7 @@ margin-right:15px;
 
 #about{
 overflow: hidden;
-background-color: #456; 
+background-color: #090D14; 
 text-align:center;
 }
 
@@ -205,7 +206,7 @@ background-color: #fff;
   font-family: Georgia;
   color: #ffffff;
   font-size: 25px;
-  background: #456;
+  background: #111;
   padding: 15px 60px 15px 60px;
   text-decoration: none;
   position: absolute;
@@ -224,7 +225,7 @@ background-color: #fff;
   font-family: Georgia;
   color: #ffffff;
   font-size: 25px;
-  background: #456;
+  background: #111;
   padding: 15px 60px 15px 60px;
   text-decoration: none;
   margin-bottom:40px;
@@ -243,23 +244,19 @@ color:#222;
 }
 
 @font-face {
-    font-family: 'CoolFont'; /*a name to be used later*/
-    src: url('coolFont.otf'); /*URL to font*/
+    font-family: 'league_font'; /*a name to be used later*/
+    src: url('league_font.otf'); /*URL to font*/
 }
 
-@font-face {
-    font-family: 'PlayfairDisplay-Regular'; /*a name to be used later*/
-    src: url('PlayfairDisplay-Regular.ttf'); /*URL to font*/
-}
 
 
 
 #intro{
-font-family: coolFont;
+font-family: league_font;
  position: absolute;
  top:25%;
  left:50%;
- font-family:coolFont;
+
      transform: translate(-50%, -50%)
 	 
     
@@ -267,28 +264,19 @@ font-family: coolFont;
      }
 	 
 	 #typewriter h1 {
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid black; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: .15em; /* Adjust as needed */
-  animation: 
-    typing 3.5s steps(40, end),
-    blink-caret .5s step-end infinite;
-	height:45px;
+  font-size:50px;
+   position: absolute;
+    width: 100px;
+    height: 50px;
+    top: 50%;
+    left: 44%;
+    margin-left: -50px; /* margin is -0.5 * dimension */
+    margin-top: -25px; 
+  
 }
 
-/* The typing effect */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 20% }
-}
-
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: black; }
-}
      
 .work_box{
 display:inline-block;
@@ -354,7 +342,7 @@ margin-left:15px;
 #about_text{
 padding-left:200px;
 padding-right:200px;
-font-size: 30px;
+font-size: 23px;
 font-family: PlayfairDisplay-Regular;
 text-align:justify;
 line-height:40px;
@@ -468,7 +456,7 @@ font-size:20px;
 #about_text{ 
     padding-right: 50px;
     padding-left: 50px;
-    font-size: 15px;
+    font-size: 12px;
     line-height:20px;
     }
 
@@ -576,7 +564,7 @@ font-size:20px;
     <a href="#main"><button type="button" class="btn">Learn more</button></a>
 	
 	<div id="typewriter">
-		<h1 id="intro"> Hi. I am Giannis.</p>
+		<h1 id="intro">Welcome to my Portfolio</p>
 	</div>
 	
 </div>
@@ -588,13 +576,13 @@ font-size:20px;
 <p id="about_title" style="color: #555;"> About me </p>
 
 <p id="about_text"><img src="kotsas.jpg" alt="Pineapple" id="about_me_photo">
-&bullet; I am Giannis Kotsakiachidis and I am an Electrical & Computer Engineering student. From the very beginning of my college years I wanted to make good use of my free time in order to feel productive, so I joined EESTEC, a voluntary, non-profit organization, at Xanthi&apos;s Local Committee.
+I am Giannis Kotsakiachidis and I am an Electrical & Computer Engineering student. From the very beginning of my college years I wanted to make good use of my free time in order to feel productive, so I joined EESTEC, a voluntary, non-profit organization, at Xanthi&apos;s Local Committee.
 </p>
-<p id="about_text"> &bullet; After my transfer from Democritus University of Thrace to the Aristotle University of Thessaloniki, I became the co-founder of EESTEC LC Thessaloniki. At the second year of my studies, I was a board member of the LC and held the position of Public Relations. Αt the same period I was the coordinator of five other people at the organization of our first international event at Android App Development.</p>
+<p id="about_text">After my transfer from Democritus University of Thrace to the Aristotle University of Thessaloniki, I became the co-founder of EESTEC LC Thessaloniki. At the second year of my studies, I was a board member of the LC and held the position of Public Relations. Αt the same period I was the coordinator of five other people at the organization of our first international event about Android App Development.</p>
 
-<p id="about_text"> &bullet; By the end of the second year, I was selected to be a member of Aristotle Space and Aeronautics Team (ASAT), in order to work on the CubeSAT project, a nano-satellite designed for research purposes. At the third year of my studies, I acquired the position of OBC coordinator, the sub-system that is basically the &quot;brain&quot; of the satellite and controls every order run by it.</p>
+<p id="about_text">By the end of the second year, I was selected to be a member of the Aristotle Space and Aeronautics Team (ASAT), in order to work on the CubeSAT project, a nano-satellite designed for research purposes. At the third year of my studies, I acquired the position of OBC coordinator, the sub-system that is basically the &quot;brain&quot; of the satellite and controls every order run by it.</p>
 
-<p id="about_text"> &bullet; In a parallel manner, I was working with web and mobile development and worked as a part-time photographer on holidays. </p>
+<p id="about_text">In a parallel manner, I was working with web and mobile development and worked as a part-time photographer on holidays. </p>
 
 <a href="myCV.pdf"><button type="button" class="btn_cv">My CV</button></a>
 
@@ -674,9 +662,9 @@ function closeNav() {
 	   
 	   <div id="portfolio">
 	   
-	   <p id="about_title" style="color:black;"> Contact </p>
+	   <p id="about_title" style="color:black;"> Contact Information </p>
 	   
-	   <p id="about_text"> If you want to know more about me, you can contact me at the following info mostly at any time (I don't sleep often).</p>
+	   
 	   
 	  
 	   <div id="info">

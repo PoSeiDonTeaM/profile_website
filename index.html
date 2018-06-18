@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
+<title> PoSeiDon </title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
@@ -70,63 +70,6 @@ color:#555;
 
 
 
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-}
-
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-}
-
-.sidenav a:hover {
-    color: #f1f1f1;
-}
-
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 5px;
-    font-size: 36px;
-    margin-left: 50px;
-}
-
-#sidebar{
-margin-top:150px;
-text-align:right;
-line-height: 80px;
-
-}
-
-#sidebar_intro:hover{
-background-color: #456;
-}
-
-#sidebar_work:hover{
-background-color: #456;
-}
-
-#sidebar_contact:hover{
-background-color: #456;
-}
-
-#sidebar_about:hover{
-background-color: #456;
-}
-
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
@@ -140,6 +83,7 @@ background-color: #456;
     height: 100%; 
 
     /* Center and scale the image nicely */
+	background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -212,7 +156,7 @@ background-color: #fff;
   text-decoration: none;
   position: absolute;
     top:87%;
-    left: 50%;
+    left: 37%;
      transform: translate(-50%, -50%)
 }
 
@@ -369,7 +313,7 @@ color:#555;
 
 #social_media{
 position:relative;
-bottom:0;
+
 
 }
 
@@ -407,6 +351,7 @@ bottom:0;
     
     #info{
 text-align:center;
+margin-top:70px; 		
 }
 
 .img-container1 {
@@ -415,7 +360,7 @@ text-align:center;
     width: 33.3%;
     height:100%;
     text-align:center;
-    margin-top:10px; 
+    
     padding-top:10px;
     padding-bottom:5px;
         
@@ -526,43 +471,10 @@ font-size:20px;
 </head>
 <body>
 
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  
-  <div id="sidebar">
-      <a href="#bg" id="sidebar_intro">Intro</a>
-      <a href="#about_title" id="sidebar_about">About me</a>
-      <a href="#about" id="sidebar_work">My Work</a>
-      <a href="#" id="sidebar_contact">Contact</a>
-      
-      
-      
-      <div id="social_media" align="middle">
-            
-            <div class="img-container facebook">
-                <img src="facebook-logo_hover.png" alt="Fjords" style="width:60px; height:60px;">
-            </div>
-            
-            <div class="img-container instagram">
-                <img src="instagram-logo_hover.png" alt="Forest" style="width:60px; height:60px;">
-            </div>
-            
-            <div class="img-container linkedin">
-                <img src="linkedin-logo_hover.png" alt="Mountains" style="width:60px; height:60px;">
-            </div>
-                        
-      </div>
-      
-      
-  </div>
-</div>
 
 <div class="bg" id="bg">
 	
-	<span style="font-size:30px;cursor:pointer" onclick="openNav()" id="navbar_opener">&#9776;</span>
     <a href="#main" class="btn">Learn more</a>
-	
-	
 	
 </div>
 
@@ -657,18 +569,9 @@ function closeNav() {
        
 </div>
 	   
-	   <div id="portfolio">
-	   
-	   <p id="about_title" style="color:black;"> Contact Information </p>
-	   
-	   
-	   
+	   <div id="portfolio">  
 	  
-	   <div id="info">
-	   <p id="about_text2"><img src="mail.png" alt="Pineapple" id="info_icons"> johnkotsas97@gmail.com </p>
-	   <p id="about_text2" style="margin-left:10px;"><img src="phone.png" alt="Pineapple" id="info_icons" > +30 6982289241 </p>
 	   
-       </div>
        
        <div id="social_media" align="middle">
             
@@ -685,6 +588,12 @@ function closeNav() {
             </div></a>
                         
       </div>
+	  
+	  <div id="info">
+	   <p id="about_text2"><img src="mail.png" alt="Pineapple" id="info_icons"> johnkotsas97@gmail.com </p>
+	   <p id="about_text2" style="margin-left:10px;"><img src="phone.png" alt="Pineapple" id="info_icons" > +30 6982289241 </p>
+	   
+       </div>
        
 	   </div>
 	   

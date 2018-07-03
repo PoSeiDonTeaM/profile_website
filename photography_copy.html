@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>CubeSAT</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -34,143 +33,50 @@ $(document).ready(function(){
 
 <style>
 
+.mySlides {display:block;
 
-/* TOP NAVIGATION BAR */
-
-.topnav {
-  overflow: hidden;
-  background-color:  #eaeaea;
-  box-shadow: 1px 0.5px 2px 2px rgba(0,0,0,.2);
-}
-
-.topnav a {
-  float: right;
-  display: block;
-  color: black;
-  text-align: center;
-  padding: 15px 50px;
-  text-decoration: none;
-  font-size: 20px;
-}
-
-/* Page content */
-.content {
-  padding: 25px;
-}
-
-.topnav a:hover {
-  background-color: #dcdcdc;
-  color: black;
 }
 
 
-.topnav .icon {
-  display: none;
-}
-
-#poseidon_logo{
-float:left;
-display: block;
-width: 127px;
-height: 33px;
-margin-left: 20px;
-margin-top: 14px;
-}	
-
-@media screen and (max-width: 600px) {
-  .topnav a:not(:first-child) {display: none;}
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative;}
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-}
-
-/* The sticky class is added to the navbar with JS when it reaches its scroll position */
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-.sticky + .content {
-  padding-top: 60px;
-}
-
-.dropdown {
-    float: right;
-    overflow: hidden;
-}
-
-.dropdown .dropbtn {
-    font-size: 20px;    
-    border: none;
-    outline: none;
-    color: black;
-    padding: 15px 40px;
-    background-color: inherit;
-    font-family: inherit;
-    margin: 0;
-}
-
-.navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: #dcdcdc;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    z-index: 1;
-}
-
-.dropdown-content a {
-    float: none;
-    color: black;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
-
-.dropdown-content a:hover {
-    background-color: #ddd;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-/* END OF NAVIGATION BAR */ 
-
-@font-face {
-    font-family: 'league_font'; /*a name to be used later*/
-    src: url('league_font.otf'); /*URL to font*/
-}
 
 
 body, html {
     height: 100%;
     margin:0%;
-	font-family: league_font;
 }
 
 p{
-font-family:league_font;
+font-family:PlayfairDisplay-Regular;
 color:#555;
+}
+
+.navigation-bar {
+    width: 100%;  /* i'm assuming full width */
+    height: 60px; /* change it to desired width */
+    position: fixed;
+  top: 0;
+
+  
+}
+.logo {
+    display: inline-block;
+    vertical-align: top;
+    width: 280px;
+    height: 40px;
+    margin-left: 100px;
+    margin-top: 8px;    /* if you want it vertically middle of the navbar. */
+    float:left;
+}
+.navigation-bar > a {
+    float:right;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 70px;
+    height: 80px;        /* if you want it to take the full height of the bar */
+    line-height: 60px;    /* if you want it vertically middle of the navbar */
+    color: white;
+    font-size:25px;
+  
 }
 
 
@@ -194,10 +100,10 @@ color:#555;
 }
 
 
-
+/*
 .bg {
     /* The image used */
-    background-image: url("photography/cubesat.jpg");
+    background-image: url("photography/alice_headshot.jpg");
 
     /* Full height */
     height: 100%; 
@@ -205,11 +111,10 @@ color:#555;
     /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
-
-	
-    
+    background-size: cover;   
 }
+
+*/
 
 #main {
     
@@ -245,23 +150,17 @@ margin-right:15px;
 
 #about{
 overflow: hidden;
-background-color: #090D14; 
+background-color: #456; 
 text-align:center;
-padding-bottom: 50px;
 
 
-}
-
-#portfolio1{
-overflow: hidden;
-background-color: #fff; 
-padding-bottom:80px;
 }
 
 #portfolio{
 overflow: hidden;
 background-color: #fff; 
 }
+
 
 .btn {
   -webkit-border-radius: 15;
@@ -270,10 +169,10 @@ background-color: #fff;
   -webkit-box-shadow: 2px 2px 8px #666666;
   -moz-box-shadow: 2px 2px 8px #666666;
   box-shadow: 3px 3px 10px #666666;
-  font-family: league_font;
+  font-family: Georgia;
   color: #ffffff;
   font-size: 25px;
-  background: #456;
+  background: transparent;
   padding: 15px 60px 15px 60px;
   text-decoration: none;
   position: absolute;
@@ -287,6 +186,15 @@ background-color:#fff;
 color:#222;
 }
 
+@font-face {
+    font-family: 'CoolFont'; /*a name to be used later*/
+    src: url('coolFont.otf'); /*URL to font*/
+}
+
+@font-face {
+    font-family: 'PlayfairDisplay-Regular'; /*a name to be used later*/
+    src: url('PlayfairDisplay-Regular.ttf'); /*URL to font*/
+}
 
 
 	 
@@ -314,6 +222,10 @@ border-radius:50%;
 vertical-align:middle;
 }
 
+#navbar_opener{
+margin-top:25px;
+margin-left:15px;
+}
 
 #about_me_photo{
  float: left;
@@ -325,7 +237,7 @@ padding-left:200px;
 padding-right:200px;
 font-size: 20px;
 font-family: PlayfairDisplay-Regular;
-text-align:justify;
+text-align:center;
 line-height:40px;
 color:#555;
 
@@ -472,110 +384,106 @@ background-color:#818D98;
 </head>
 <body>
 
- 
-
-<div class="bg" id="bg">
-    <a href="#main"><button type="button" class="btn">Learn more</button></a>	
+ <div class="my_slides" style="max-width:100%">
+  <img class="mySlides" src="kerkini_lake.jpg" style="width:100%">
+  <img class="mySlides" src="kotsas_website.jpg" style="width:100%">
+  <img class="mySlides" src="paidagwgiko.jpg" style="width:100%">
 </div>
+
+<!--
+<div class="bg" id="bg">
+
+<nav class="navigation-bar">
+    <img class="logo" src="logo_kotsas.png">
+    <a href="#about_title">My Work</a>
+    <a href="main_page.html">Home</a>
+</nav>
+
+
+
+
+
+    <a href="#main"><button type="button" class="btn">Learn more</button></a>
+	
+
+	
+</div>
+
+-->
 
 <div id="main">
 
-<!-- Top navigation bar -->
+<div id="portfolio">
 
-<div class="topnav" id="myTopnav">
-  <img src="poseidon_logo.png" id="poseidon_logo">
-  <a href="#about">About</a>
-  <a href="#contact">Contact</a>
-  <div class="dropdown">
-    <button class="dropbtn">My Work 
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="CubeSAT.html">CubeSAT</a>
-      <a href="mobile_app.html">Mobile Development</a>
-      <a href="photography.html">Photography</a>
-    </div>
-  </div> 
-  <a href="index.html" class="active">Home</a>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
-</div>	
-
-<div id="portfolio1">
-
-<p id="about_title" style="color: #555;"> Aristotle Space & Aeronautics Team (ASAT) </p>
-
-<p id="about_text"><img src="photography/asat_team.jpg" alt="Pineapple" style="width:711px;height:400px;" id="about_me_photo">
-The Aristotle Space & Aeronautics Team seeks to promote and advance aerospace engineering throughout the university. Furthermore, the team aims to stimulate interest in aerospace, technology and science through outreach activities.
-</p>
-
-
-
+<!-- Header -->
+<div class="header">
+  <h1>Image Grid</h1>
+  <p>Below there are some photos that were taken by me.</p>
 </div>
 
-<div id="portfolio1">
+<!-- Photo Grid -->
+<div class="row"> 
+  <div class="column">
+    <img src="photography/_DSC0785.jpg" style="width:100%">
+    <img src="photography/kerkini_boat.jpg" style="width:100%">
 
-<p id="about_title" style="color: #555;"> CubeSAT Project </p>
-
-<p id="about_text"><img src="photography/cubesat_team.jpg" alt="Pineapple" style="width:711px;height:400px;" id="about_me_photo">
-The CubeSat team is getting started with the design of a CubeSat; a tiny satellite that can be launched as secondary payload on commercial launches, at a fraction of the cost of a traditional satellite. Its mission is to collect data of active gamma ray sources of our universe, such as quasars, black holes or AGNs, using a prototype detector constructed in the nuclear physics department of AUTh.
-</p>
-
-
-
+  </div>
+  <div class="column">
+    <img src="photography/nikos_bw.jpg" style="width:100%">
+    <img src="photography/dice.jpg" style="width:100%">
+    
+    
+  </div>  
+  <div class="column">
+    <img src="photography/Nikos_3.jpg" style="width:100%">
+    <img src="photography/nick.jpg" style="width:100%">
+    
+    
+  </div>
+  <div class="column">
+    <img src="photography/DSC_6257.jpg" style="width:100%">
+  
+  </div>
 </div>
 
-<div id="portfolio1">
 
-<p id="about_title" style="color: #555;"> My Role </p>
-
-<p id="about_text"><img src="my_role.jpg" alt="Pineapple" style="width:309px;height:400px; margin-right:42px;" id="about_me_photo">
-Working on a CubeSAT project demands a huge amount of effort from each and every member. If a subsystem does not work as expected, that affects the whole project
-by holding back its progress. From the second year being a member at the team, I aquired the position of On-Board-Computer Subsystem Coordinator. The job of a coordinator
-is to ensure that everything will go as planned and avoid any upcoming setbacks. Beyond this, working as a team sometimes may be difficult, due to some of the members' differences. So in order 
-to achieve a good cooperation among the members, the coordinator needs to eliminate those differences.
-</p>
-
-
-
+    
 </div>
-
 
 
 <div id="about">
-        
-        <p id="about_title"> Our Work </p>
-        
+
+        <p id="about_title"> My Work </p>
+
         <!-- Portfolio Gallery Grid -->
         <div id="work_grid">
 <div class="row">
   <div class="column">
     <div class="content">
-      <img src="photography/cubesat_deth.jpg" alt="Mountains" style="width:100%">
-      <h3>CubeSAT at T.I.F.</h3>
-      <p>ASAT took place in the Thessaloniki International Fair and as a CubeSAT we presented our project and augmented the image of our team.</p>
+      <img src="photography/nikos_jean.jpg" alt="Mountains" style="width:100%">
+      <h3>Brother Fashion Portrait</h3>
+      <p>The photo has been taken at my own home-studio. The theme of that day's photoshoot was fashion photography. My brother wore many vintage clothes for the photoshooting purpose.</p>
     </div>
   </div>
   <div class="column">
     <div class="content">
-    <img src="photography/cubesat_video_photo.jpg" alt="Lights" style="width:100%">
-      <h3>Space Tech Expo Video</h3>
-      <p>We participated at the Space Tech Expo and made a short presentation of our team. In order to achieve this we had to make video presentation of our project. See our video application by clicking <a href="https://www.youtube.com/watch?v=QZccyrR0XM4">here</a>.</p>
+    <img src="photography/babewatch.jpg" alt="Lights" style="width:100%">
+      <h3>Babewatch - One Stand Event</h3>
+      <p>Worked as event photographer hired by One Stand Event at Ballaro All day beach bar, which is located in the second "foot" of Chalkidiki, in Greece.</p>
     </div>
   </div>
   <div class="column">
     <div class="content">
-    <img src="photography/me_gianno.jpg" alt="Nature" style="width:100%">
-      <h3>T.I.F. Presentations</h3>
-      <p>At the above photo you can see me (on the left) presenting our project (CubeSAT) and its mission by making a telemetry demonstration using the mockup model.</p>
+    <img src="photography/lithotopos.jpg" alt="Nature" style="width:100%">
+      <h3>Lithotopos Landscape</h3>
+      <p>The photo has taken in an Excursion at Lithotopos, a village that is near Kerkini Lake. The scenery was amazing and full of green. </p>
     </div>
   </div>
   <div class="column">
     <div class="content">
-    <img src="photography/morpheus_cup.jpg" alt="Mountains" style="width:100%">
-      <h3>Morpheus Cup</h3>
-      <p>Reaching the semi-finals of Morpheus Cup 2018 we sent a video presentation of our project as a submission of our project, "AUTH CubeSAT" describing in a few words the role of each subsystem of the nano-satellite.</p>
+    <img src="photography/ernesto_ballaro.jpg" alt="Mountains" style="width:100%">
+      <h3>Ballaro Restaurant</h3>
+      <p>Worked as a photographer for a local gourmet restaurant's advertisement for their new italian cook, Ernesto. Also, worked as an event photographer at Christmas' Eve.</p>
     </div>
   </div>
 <!-- END GRID -->
@@ -603,7 +511,7 @@ function closeNav() {
 	   
 	   <p id="about_title" style="color:black;"> Contact </p>
 	   
-	   <p id="about_text" style="text-align:center;"> If you want to know more about me, you can contact me at the following info mostly at any time (I don't sleep often).</p>
+	   <p id="about_text"> If you want to know more about me, you can contact me at the following info mostly at any time (I don't sleep often).</p>
 	   
 	  
 	   <div id="info">
@@ -670,36 +578,24 @@ $(document).ready(function(){
 });
 </script>
 
-<!-- RESPONSIVE NAGIVATION BAR -->
+
 
 <script>
-function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnav";
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
     }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 2 seconds
 }
 </script>
-
-<!-- STICKY NAVIGATION BAR -->
-
-<script>
-window.onscroll = function() {myFunction()};
-
-var navbar = document.getElementById("myTopnav");
-var sticky = navbar.offsetTop;
-
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
-  } else {
-    navbar.classList.remove("sticky");
-  }
-}
-</script>
-
 
 
 </body>

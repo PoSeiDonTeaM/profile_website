@@ -157,54 +157,36 @@ margin-top: 14px;
 /* END OF NAVIGATION BAR */ 
 
 
-.main { grid-area: main; }
-.sidebar { 
-		grid-area: sidebar;
-		
-		}
-
-.footer { grid-area: footer; }
 
 
 
-.grid-container {
-  display: grid;
-  grid-template-areas:
-    'main main main sidebar sidebar'
-    'footer footer footer footer footer';
-  grid-gap: 10px;
-  background-color:white;
-  
+.container {
+    width: 80%;
+    background-color: #white;
+    margin: auto;
+	padding-top: 3%;
+	padding-bottom:5%;
 }
-.grid-container > div {
-  background-color: rgba(255, 255, 255, 0.8);
-  text-align: center;
-  padding: 20px 0;
-  font-size: 30px;
+.main{
+    width: 70%;
+    float: left;
+    background-color: white;
 }
-
-
-
-
-
-
-
-.main {
-width:50%;
-margin-left: 20%;
-padding-top:40px;
-background-color: #f1f1f1;
-
-    
-}
-
-
 .sidebar {
-padding-top:40px;
-background-color: white;
-
-    
+    width: 25%;
+    float: left;
+    height: 800px;
+	margin-left: 5%;
+    background-color: #f1f1f1;
 }
+
+.footer{
+    clear: both;
+	background-color: #f1f1f1;
+}
+
+
+
 
 
 /* BLOG CONTENT */
@@ -254,11 +236,11 @@ padding:100px;
 }
 
 
-
 #about_me_thumbnail{
 	float:left;
     padding: 15px;
     width: 100px;
+	border-radius:50%;
 }
 
 #about_me_text{
@@ -266,6 +248,26 @@ padding:100px;
 	padding:15px;
 	}
 
+	
+#read_also{
+padding-top:25px;	
+}
+
+#read_also_box{
+width:90%;
+height: 50px;
+margin:auto;
+background-color:white;
+}	
+
+#read_also_text{
+text-align:center;
+vertical-align:middle;
+line-height:50px;
+font-size: 23px;
+font-weight:bold;
+}
+	
 /* END OF SIDEBAR */
 
 
@@ -387,36 +389,43 @@ background-color:#818D98;
 </div>	
 
 
-<div class="grid-container">
-
-<div class="main">
-
-
-<img src="kavala_cubesat.jpg" alt="Kavala_CubeSAT" id="blog_image">
-
-<p id="blog_title">6th Kavala Airsea Show</p>
-
-<p id="blog_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquet, est iaculis faucibus tempus, ex lectus fringilla lacus, nec iaculis erat libero in tellus. Phasellus nec rhoncus leo, in auctor velit. In hac habitasse platea dictumst. Quisque eu elementum arcu. Pellentesque sagittis tincidunt lectus. Donec malesuada euismod euismod. Phasellus efficitur dui a augue rutrum, vitae egestas ipsum blandit.</p>
-
-<p id="blog_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquet, est iaculis faucibus tempus, ex lectus fringilla lacus, nec iaculis erat libero in tellus. Phasellus nec rhoncus leo, in auctor velit. In hac habitasse platea dictumst. Quisque eu elementum arcu. Pellentesque sagittis tincidunt lectus. Donec malesuada euismod euismod. Phasellus efficitur dui a augue rutrum, vitae egestas ipsum blandit.</p>
-
-<p id="blog_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquet, est iaculis faucibus tempus, ex lectus fringilla lacus, nec iaculis erat libero in tellus. Phasellus nec rhoncus leo, in auctor velit. In hac habitasse platea dictumst. Quisque eu elementum arcu. Pellentesque sagittis tincidunt lectus. Donec malesuada euismod euismod. Phasellus efficitur dui a augue rutrum, vitae egestas ipsum blandit.</p>
+<div class="container">
+	<div class="main">
 
 
+	<img src="kavala_cubesat.jpg" alt="Kavala_CubeSAT" id="blog_image">
 
-</div>
-<div class="sidebar">
+	<p id="blog_title">6th Kavala Airsea Show</p>
+
+	<p id="blog_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquet, est iaculis faucibus tempus, ex lectus fringilla lacus, nec iaculis erat libero in tellus. Phasellus nec rhoncus leo, in auctor velit. In hac habitasse platea dictumst. Quisque eu elementum arcu. Pellentesque sagittis tincidunt lectus. Donec malesuada euismod euismod. Phasellus efficitur dui a augue rutrum, vitae egestas ipsum blandit.</p>
+
+	<p id="blog_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquet, est iaculis faucibus tempus, ex lectus fringilla lacus, nec iaculis erat libero in tellus. Phasellus nec rhoncus leo, in auctor velit. In hac habitasse platea dictumst. Quisque eu elementum arcu. Pellentesque sagittis tincidunt lectus. Donec malesuada euismod euismod. Phasellus efficitur dui a augue rutrum, vitae egestas ipsum blandit.</p>
+
+	<p id="blog_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquet, est iaculis faucibus tempus, ex lectus fringilla lacus, nec iaculis erat libero in tellus. Phasellus nec rhoncus leo, in auctor velit. In hac habitasse platea dictumst. Quisque eu elementum arcu. Pellentesque sagittis tincidunt lectus. Donec malesuada euismod euismod. Phasellus efficitur dui a augue rutrum, vitae egestas ipsum blandit.</p>
+
+
+
+	</div>
+	<div class="sidebar">
+
+
 
 	<div id="credentials">
 
-		<img src="kotsas.jpg" id="about_me_thumbnail">
+		<img src="kotsas_squared.jpg" id="about_me_thumbnail">
 
-		<p id="about_me_text"> <strong>Giannis Kotsakiachidis</strong></p>
-		
-
+		<p id="about_me_text"> <strong>Giannis Kotsakiachidis</strong> <a href="index.html" style="text-decoration: none">Learn more about me...</a>	</p>
 	</div>
-
+	
+	<div id="read_also">
+	
+	<div id="read_also_box">
+	<p id="read_also_text">Read Also </p>
+	</div>
+	
 </div> 
+</div>
+
 <div class="footer">
 
 
@@ -450,7 +459,7 @@ background-color:#818D98;
        
 	   </div>
 
-</div>	   
+	   
   
 <script>
 

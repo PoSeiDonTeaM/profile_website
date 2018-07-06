@@ -39,7 +39,7 @@ $(document).ready(function(){
 
 .topnav {
   overflow: hidden;
-  background-color:  #eaeaea;
+  background-color:  #5680B5;
   box-shadow: 1px 0.5px 2px 2px rgba(0,0,0,.2);
 }
 
@@ -165,7 +165,7 @@ margin-top: 14px;
     background-color: #white;
     margin: auto;
 	padding-top: 3%;
-	padding-bottom:5%;
+	margin-bottom:10px;
 }
 .main{
     width: 70%;
@@ -175,7 +175,6 @@ margin-top: 14px;
 .sidebar {
     width: 25%;
     float: left;
-    height: 800px;
 	margin-left: 5%;
     background-color: #f1f1f1;
 }
@@ -183,6 +182,7 @@ margin-top: 14px;
 .footer{
     clear: both;
 	background-color: #f1f1f1;
+	margin-top: 50px;
 }
 
 
@@ -217,6 +217,20 @@ color:#000;
 
 }
 
+#selected_posts{
+text-align:center;
+float:left;
+width: 90%;
+}
+
+#selected_posts_container{
+float:left;
+}
+
+#similar_post_thumbnail{
+width: 20%;
+}
+
 /* END OF BLOG CONTENT */
 
 
@@ -246,6 +260,7 @@ padding:100px;
 #about_me_text{
 	font-size: 15px;
 	padding:15px;
+
 	}
 
 	
@@ -257,7 +272,7 @@ padding-top:25px;
 width:90%;
 height: 50px;
 margin:auto;
-background-color:white;
+background-color: #5680B5;
 }	
 
 #read_also_text{
@@ -266,7 +281,29 @@ vertical-align:middle;
 line-height:50px;
 font-size: 23px;
 font-weight:bold;
+color:white;
 }
+
+#related_post{
+vertical-align:middle;
+text-align: center;	
+padding-top: 40px;
+}
+
+#related_post_thumbnail{
+width:90%;
+}
+
+#related_post_title{
+font-size: 20px;
+}
+
+#related_post_title:hover{
+font-weight:bold;
+}
+
+
+
 	
 /* END OF SIDEBAR */
 
@@ -403,7 +440,8 @@ background-color:#818D98;
 
 	<p id="blog_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquet, est iaculis faucibus tempus, ex lectus fringilla lacus, nec iaculis erat libero in tellus. Phasellus nec rhoncus leo, in auctor velit. In hac habitasse platea dictumst. Quisque eu elementum arcu. Pellentesque sagittis tincidunt lectus. Donec malesuada euismod euismod. Phasellus efficitur dui a augue rutrum, vitae egestas ipsum blandit.</p>
 
-
+	
+	</div>
 
 	</div>
 	<div class="sidebar">
@@ -423,8 +461,40 @@ background-color:#818D98;
 	<p id="read_also_text">Read Also </p>
 	</div>
 	
-</div> 
+	<div id="related_post"> 
+	<a href="index.html"><img src="kerkini_lake.jpg" id="related_post_thumbnail"></a>
+	<a href="index.html" style="text-decoration:none;" id="related_post_title"><p>Kerkini Lake - A place to visit</p></a>
+	
+	</div>
+
+<div id="related_post"> 
+	<a href="index.html"><img src="kerkini_lake.jpg" id="related_post_thumbnail"></a>
+	<a href="index.html" style="text-decoration:none;" id="related_post_title"><p>Kerkini Lake - A place to visit</p></a>
+	
+	</div> 
+
+	
+	</div>
 </div>
+
+<div id="selected_posts">
+	
+	<div id="selected_posts_container"> 
+	<a href="index.html"><img src="kerkini_lake.jpg" id="similar_post_thumbnail"></a>
+	<a href="index.html" style="text-decoration:none;" id="related_post_title"><p>Kerkini Lake - A place to visit</p></a>
+	</div>
+	
+	<div id="selected_posts_container"> 
+	<a href="index.html"><img src="kerkini_lake.jpg" id="similar_post_thumbnail"></a>
+	<a href="index.html" style="text-decoration:none;" id="related_post_title"><p>Kerkini Lake - A place to visit</p></a>
+	
+	</div>
+	
+	
+</div>
+	
+	
+	
 
 <div class="footer">
 

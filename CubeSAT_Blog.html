@@ -98,6 +98,7 @@
     display: block;
     text-align: left;
     }
+	
     }
 
     /* The sticky class is added to the navbar with JS when it reaches its scroll position */
@@ -160,6 +161,7 @@
 
 
 
+	
 
     .container {
     width: 80%;
@@ -168,6 +170,8 @@
         padding-top: 3%;
         margin-bottom:10px;
     }
+	
+	
     .main{
     width: 70%;
     float: left;
@@ -179,6 +183,9 @@
         margin-left: 5%;
     background-color: #f1f1f1;
     }
+	
+	
+	
 
     .footer{
     clear: both;
@@ -219,17 +226,16 @@
     }
 
     #selected_posts{
-    text-align:center;
-    float:left;
-    width: 90%;
+    display:flex;
+    width: 100%;
     }
 
     #selected_posts_container{
-    float:left;
+	text-align:center;
     }
 
     #similar_post_thumbnail{
-    width: 20%;
+    width: 35%;
     }
 
     /* END OF BLOG CONTENT */
@@ -247,7 +253,6 @@
     #sidebar{
 
     padding:100px;
-
     }
 
 
@@ -404,6 +409,7 @@
 <body>
     <!-- Top navigation bar -->
     <div class="topnav" id="myTopnav">
+	
         <img src="poseidon_logo.png" id="poseidon_logo"> <a href="#about">About</a> <a href="#contact">Contact</a>
         <div class="dropdown">
             <button class="dropbtn">My Work</button>
@@ -412,16 +418,20 @@
             </div>
         </div><a href="index.html" class="active">Home</a> <a href="javascript:void(0);" class="icon" onclick="myFunction()"></a>
     </div>
-    <div class="container">
+    
+	
+	<div class="container">
         <div class="main">
             <img src="kavala_cubesat.jpg" alt="Kavala_CubeSAT" id="blog_image">
             <p id="blog_title">6th Kavala Airsea Show</p>
             <p id="blog_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquet, est iaculis faucibus tempus, ex lectus fringilla lacus, nec iaculis erat libero in tellus. Phasellus nec rhoncus leo, in auctor velit. In hac habitasse platea dictumst. Quisque eu elementum arcu. Pellentesque sagittis tincidunt lectus. Donec malesuada euismod euismod. Phasellus efficitur dui a augue rutrum, vitae egestas ipsum blandit.</p>
             <p id="blog_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquet, est iaculis faucibus tempus, ex lectus fringilla lacus, nec iaculis erat libero in tellus. Phasellus nec rhoncus leo, in auctor velit. In hac habitasse platea dictumst. Quisque eu elementum arcu. Pellentesque sagittis tincidunt lectus. Donec malesuada euismod euismod. Phasellus efficitur dui a augue rutrum, vitae egestas ipsum blandit.</p>
             <p id="blog_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquet, est iaculis faucibus tempus, ex lectus fringilla lacus, nec iaculis erat libero in tellus. Phasellus nec rhoncus leo, in auctor velit. In hac habitasse platea dictumst. Quisque eu elementum arcu. Pellentesque sagittis tincidunt lectus. Donec malesuada euismod euismod. Phasellus efficitur dui a augue rutrum, vitae egestas ipsum blandit.</p>
-        </div>
-    </div>
+			<iframe width="700" height="500" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+		</div>
+    
     <div class="sidebar">
+	
         <div id="credentials">
             <img src="kotsas_squared.jpg" id="about_me_thumbnail">
             <p id="about_me_text"><strong>Giannis Kotsakiachidis</strong> <a href="index.html" style="text-decoration: none">Learn more about me...</a></p>
@@ -440,7 +450,8 @@
             </div>
         </div>
     </div>
-    <div id="selected_posts">
+    </div>
+	<div id="selected_posts">
         <div id="selected_posts_container">
             <a href="index.html"><img src="kerkini_lake.jpg" id="similar_post_thumbnail"></a> <a href="index.html" style="text-decoration:none;" id="related_post_title">
             <p>Kerkini Lake - A place to visit</p></a>
@@ -450,6 +461,7 @@
             <p>Kerkini Lake - A place to visit</p></a>
         </div>
     </div>
+	
     <div class="footer">
         <p id="about_title" style="color:black;">Contact</p>
         <p id="about_text" style="text-align:center;">If you want to know more about me, you can contact me at the following info mostly at any time (I don't sleep often).</p>
@@ -500,17 +512,20 @@
        }
     });
     });
-    </script> <!-- RESPONSIVE NAGIVATION BAR -->
-     
-    <script>
-    function myFunction() {
+    </script> 
+	
+	
+<script>
+function myFunction() {
     var x = document.getElementById("myTopnav");
     if (x.className === "topnav") {
         x.className += " responsive";
     } else {
         x.className = "topnav";
     }
-    }
+}
+</script>
+	
     </script> <!-- STICKY NAVIGATION BAR
 
 <script>

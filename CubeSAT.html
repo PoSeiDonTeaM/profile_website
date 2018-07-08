@@ -223,24 +223,20 @@ font-weight:bold;
 color:#fff;
 }
 
-#about_me_photo img{
 
-width: 15%;
-height: 15%;
+#about_me_text{
+text-align:center;
+display:inline-block;
+}
+
+#about_cubesat_photo{
+width:611px;
 
 }
 
 #about_me_photo{
-    
-    float:middle;
-	
-}
-
-#about_me_text{
-float:middle;
-margin-left:15px;
-margin-right:15px;
-
+width:309px;
+height:400px;
 }
 
 #about{
@@ -464,9 +460,24 @@ text-align:center;
 background-color:#818D98;
 }
 
+@media screen and (max-width: 600px){
 
+#about_title{
+font-size:26px;
+}
 
+#about_cubesat_photo{
+width: 90%;
 
+}
+
+#about_text{
+padding-left:0px;
+padding-right:0px;
+margin:auto;
+}
+
+}
 	
 </style>
 </head>
@@ -506,7 +517,7 @@ background-color:#818D98;
 
 <p id="about_title" style="color: #555;"> Aristotle Space & Aeronautics Team (ASAT) </p>
 
-<p id="about_text"><img src="photography/asat_team.jpg" alt="Pineapple" style="width:711px;height:400px;" id="about_me_photo">
+<p id="about_text"><img src="photography/asat_team.jpg" alt="Pineapple" id="about_cubesat_photo">
 The Aristotle Space & Aeronautics Team seeks to promote and advance aerospace engineering throughout the university. Furthermore, the team aims to stimulate interest in aerospace, technology and science through outreach activities.
 </p>
 
@@ -518,7 +529,7 @@ The Aristotle Space & Aeronautics Team seeks to promote and advance aerospace en
 
 <p id="about_title" style="color: #555;"> CubeSAT Project </p>
 
-<p id="about_text"><img src="photography/cubesat_team.jpg" alt="Pineapple" style="width:711px;height:400px;" id="about_me_photo">
+<p id="about_text"><img src="photography/cubesat_team.jpg" alt="Pineapple"  id="about_cubesat_photo">
 The CubeSat team is getting started with the design of a CubeSat; a tiny satellite that can be launched as secondary payload on commercial launches, at a fraction of the cost of a traditional satellite. Its mission is to collect data of active gamma ray sources of our universe, such as quasars, black holes or AGNs, using a prototype detector constructed in the nuclear physics department of AUTh.
 </p>
 
@@ -530,7 +541,7 @@ The CubeSat team is getting started with the design of a CubeSat; a tiny satelli
 
 <p id="about_title" style="color: #555;"> My Role </p>
 
-<p id="about_text"><img src="my_role.jpg" alt="Pineapple" style="width:309px;height:400px; margin-right:42px;" id="about_me_photo">
+<p id="about_text"><img src="my_role.jpg" alt="Pineapple" style="margin-right:42px;" id="about_me_photo">
 Working on a CubeSAT project demands a huge amount of effort from each and every member. If a subsystem does not work as expected, that affects the whole project
 by holding back its progress. From the second year being a member at the team, I aquired the position of On-Board-Computer Subsystem Coordinator. The job of a coordinator
 is to ensure that everything will go as planned and avoid any upcoming setbacks. Beyond this, working as a team sometimes may be difficult, due to some of the members' differences. So in order 

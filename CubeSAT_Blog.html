@@ -174,17 +174,44 @@
 	
     .main{
     width: 70%;
-    float: left;
     background-color: white;
     }
     .sidebar {
     width: 25%;
-    float: left;
+    float: right;
         margin-left: 5%;
     background-color: #f1f1f1;
     }
 	
+	@media screen and (max-width: 600px){
 	
+	.main{
+	width: 100%;
+	}
+	
+	.sidebar{
+	display:none;
+	}
+	
+	#read_selected_posts_box{
+    width:40%;
+    height: 50px;
+    text-align:left;
+    background-color: #5680B5;
+	margin-left: 10%;
+	margin-top:50px;
+    } 
+
+	#selected_posts{
+		padding-top:50px;
+		width: 80%;
+	}
+
+	#blog_title{
+	font-size:20px;
+	}
+	
+	}
 	
 
     .footer{
@@ -218,15 +245,16 @@
     }
 
     #blog_text{
-    text-align: text-align: justify;
+    text-align:justify;
     font-size:20px;
     color:#000;
     }
 
-    }
+		
 
     #selected_posts{
     display:flex;
+	padding-top:50px;
     width: 100%;
     }
 
@@ -235,7 +263,7 @@
     }
 
     #similar_post_thumbnail{
-    width: 35%;
+    width: 70%;
     }
 
     /* END OF BLOG CONTENT */
@@ -308,14 +336,19 @@
     font-weight:bold;
     }
 
-
-
         
     /* END OF SIDEBAR */
 
 
-
-
+	#read_selected_posts_box{
+    width:20%;
+    height: 50px;
+    text-align:left;
+    background-color: #5680B5;
+	margin-left: 10%;
+	margin-top:50px;
+    }       
+	
 
     @font-face {
     font-family: 'league_font'; /*a name to be used later*/
@@ -421,17 +454,8 @@
     
 	
 	<div class="container">
-        <div class="main">
-            <img src="kavala_cubesat.jpg" alt="Kavala_CubeSAT" id="blog_image">
-            <p id="blog_title">6th Kavala Airsea Show</p>
-            <p id="blog_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquet, est iaculis faucibus tempus, ex lectus fringilla lacus, nec iaculis erat libero in tellus. Phasellus nec rhoncus leo, in auctor velit. In hac habitasse platea dictumst. Quisque eu elementum arcu. Pellentesque sagittis tincidunt lectus. Donec malesuada euismod euismod. Phasellus efficitur dui a augue rutrum, vitae egestas ipsum blandit.</p>
-            <p id="blog_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquet, est iaculis faucibus tempus, ex lectus fringilla lacus, nec iaculis erat libero in tellus. Phasellus nec rhoncus leo, in auctor velit. In hac habitasse platea dictumst. Quisque eu elementum arcu. Pellentesque sagittis tincidunt lectus. Donec malesuada euismod euismod. Phasellus efficitur dui a augue rutrum, vitae egestas ipsum blandit.</p>
-            <p id="blog_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquet, est iaculis faucibus tempus, ex lectus fringilla lacus, nec iaculis erat libero in tellus. Phasellus nec rhoncus leo, in auctor velit. In hac habitasse platea dictumst. Quisque eu elementum arcu. Pellentesque sagittis tincidunt lectus. Donec malesuada euismod euismod. Phasellus efficitur dui a augue rutrum, vitae egestas ipsum blandit.</p>
-			
-		</div>
-    
-    <div class="sidebar">
 	
+		<div class="sidebar">
         <div id="credentials">
             <img src="kotsas_squared.jpg" id="about_me_thumbnail">
             <p id="about_me_text"><strong>Giannis Kotsakiachidis</strong> <a href="index.html" style="text-decoration: none">Learn more about me...</a></p>
@@ -449,14 +473,36 @@
                 <p>Kerkini Lake - A place to visit</p></a>
             </div>
         </div>
+   
     </div>
-    </div>
+		
+        <div class="main">
+            <img src="kavala_cubesat.jpg" alt="Kavala_CubeSAT" id="blog_image">
+            <p id="blog_title">6th Kavala Airsea Show</p>
+            <p id="blog_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquet, est iaculis faucibus tempus, ex lectus fringilla lacus, nec iaculis erat libero in tellus. Phasellus nec rhoncus leo, in auctor velit. In hac habitasse platea dictumst. Quisque eu elementum arcu. Pellentesque sagittis tincidunt lectus. Donec malesuada euismod euismod. Phasellus efficitur dui a augue rutrum, vitae egestas ipsum blandit.</p>
+            <p id="blog_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquet, est iaculis faucibus tempus, ex lectus fringilla lacus, nec iaculis erat libero in tellus. Phasellus nec rhoncus leo, in auctor velit. In hac habitasse platea dictumst. Quisque eu elementum arcu. Pellentesque sagittis tincidunt lectus. Donec malesuada euismod euismod. Phasellus efficitur dui a augue rutrum, vitae egestas ipsum blandit.</p>
+            <p id="blog_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquet, est iaculis faucibus tempus, ex lectus fringilla lacus, nec iaculis erat libero in tellus. Phasellus nec rhoncus leo, in auctor velit. In hac habitasse platea dictumst. Quisque eu elementum arcu. Pellentesque sagittis tincidunt lectus. Donec malesuada euismod euismod. Phasellus efficitur dui a augue rutrum, vitae egestas ipsum blandit.</p>
+			
+		</div>
+    
+	</div>
+	
+	<hr>
+	
+	 <div id="read_selected_posts_box">
+                <p id="read_also_text">More suggestions</p>
+            </div>
+	
 	<div id="selected_posts">
         <div id="selected_posts_container">
             <a href="index.html"><img src="kerkini_lake.jpg" id="similar_post_thumbnail"></a> <a href="index.html" style="text-decoration:none;" id="related_post_title">
             <p>Kerkini Lake - A place to visit</p></a>
         </div>
         <div id="selected_posts_container">
+            <a href="index.html"><img src="kerkini_lake.jpg" id="similar_post_thumbnail"></a> <a href="index.html" style="text-decoration:none;" id="related_post_title">
+            <p>Kerkini Lake - A place to visit</p></a>
+        </div>
+		<div id="selected_posts_container">
             <a href="index.html"><img src="kerkini_lake.jpg" id="similar_post_thumbnail"></a> <a href="index.html" style="text-decoration:none;" id="related_post_title">
             <p>Kerkini Lake - A place to visit</p></a>
         </div>

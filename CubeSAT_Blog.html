@@ -5,8 +5,8 @@
     <title>CubeSAT</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
-    </script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
     $(document).ready(function(){
     // Add smooth scrolling to all links
@@ -98,64 +98,14 @@
     display: block;
     text-align: left;
     }
+	}
 	
-    }
+    
 
-    /* The sticky class is added to the navbar with JS when it reaches its scroll position */
-    .sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    }
+   
 
-    /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-    .sticky + .content {
-    padding-top: 60px;
-    }
-
-    .dropdown {
-    float: right;
-    overflow: hidden;
-    }
-
-    .dropdown .dropbtn {
-    font-size: 20px;    
-    border: none;
-    outline: none;
-    color: black;
-    padding: 15px 40px;
-    background-color: inherit;
-    font-family: inherit;
-    margin: 0;
-    }
-
-    .navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: #dcdcdc;
-    }
-
-    .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    z-index: 1;
-    }
-
-    .dropdown-content a {
-    float: none;
-    color: black;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-    }
-
-    .dropdown-content a:hover {
-    background-color: #ddd;
-    }
-
-    .dropdown:hover .dropdown-content {
-    display: block;
-    }
+  
+    
     /* END OF NAVIGATION BAR */ 
 
 
@@ -454,14 +404,15 @@
     <!-- Top navigation bar -->
     <div class="topnav" id="myTopnav">
 	
-        <img src="poseidon_logo.png" id="poseidon_logo"> <a href="#about">About</a> <a href="#contact">Contact</a>
-        <div class="dropdown">
-            <button class="dropbtn">My Work</button>
-            <div class="dropdown-content">
-                <a href="CubeSAT.html">CubeSAT</a> <a href="mobile_app.html">Mobile Development</a> <a href="photography.html">Photography</a>
-            </div>
-        </div><a href="index.html" class="active">Home</a> <a href="javascript:void(0);" class="icon" onclick="myFunction()"></a>
-    </div>
+        <img src="poseidon_logo.png" id="poseidon_logo"> 
+		<a href="#about">About</a> 
+		<a href="#footer">Contact</a>
+		<a href="CubeSAT.html">CubeSAT</a>
+		<a href="mobile_app.html">Mobile Development</a> 
+		<a href="photography.html">Photography</a>
+		<a href="index.html" class="active">Home</a>
+		<a href="javascript:void(0);" class="icon" onclick="myFunction()"></a>
+		</div>
     
 	
 	<div class="container">
